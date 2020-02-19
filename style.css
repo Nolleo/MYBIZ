@@ -1,0 +1,51 @@
+header {
+    height: 150px;
+    border-width: 10px;
+    border-color: blueviolet; 
+    border-style: double;   
+    padding: 10px;
+}
+
+header img {
+    max-width: 140px;
+}
+
+h1 {
+    color: blueviolet;
+    font-family: cursive;
+    margin: auto;
+}
+
+ul {
+    padding-left: 30vmin;
+    align-items: center
+}
+
+article { width: 50%;
+    height: 300px;
+    float: left;
+    border-width: 6px;
+    border-color: orchid;
+    border-style: dotted;
+}
+
+a {
+text-decoration: none;   
+}
+
+a:hover {
+    text-transform: uppercase;
+}
+
+body {background-color: rgb(226, 192, 43);}
+
+footer {
+    height: 30px;
+    max-width: max-content;
+    font-size: smaller;
+    text-align: left;
+}
+footer li {
+    float: left;
+    margin-left: 30px;
+}
