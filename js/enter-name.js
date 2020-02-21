@@ -1,35 +1,15 @@
-function LikeIceCream(){
-
-    var LikeScore = prompt("On a scale of 1-10, How much do you like ICE CREAM?");
-    
-    var score = LikeScore;
-    var rate = score;
-    var name = enterName();
-    
-    if (LikeScore >= 10 ) {
-        confirm(name + ", with a score of " + rate + ", you are COOL and ready for ice cream!");
-    } else if (score > 5 && score <10) {
-        confirm(name + ", with a score of " + rate + ", MIGHT be ready for ice cream.");
-    } else if (score < 5) {
-        confirm(name + ", with a score of " + rate + ", you are NOT ready for ice cream.");
-    } else if (score > 0) {
-        confirm(name + ", with a score of " + rate + ", you need to leave NOW!");
-    }
-     
-    return score;
-    
-}
-
 function IceCreamScale(){
 
     var cones = LikeIceCream();
     var cone = Number(cones);
     console.log(cone);
-    var message = '<img src="images/iceCreamCone.png" width="30px"/>'
+    var message = '<img src="images/iceCreamCone.png" width="30px"/>';
     var items = '';
+
     for(var i = 0; i <= cone; i++){
         items += message;
     }
+    
     console.log(message)
     return items; 
 
@@ -41,7 +21,7 @@ function enterName(){
     
     var name;
     
-    if (customerName != null) {
+    if (customerName !== '<enter YOUR NAME here>') {
         name = customerName;
 
     }
@@ -50,6 +30,44 @@ function enterName(){
     document.write("ICE CREAM for " + name + "!");
 
     return name;
+    
+}
+
+
+function LikeIceCream(){
+
+    var LikeScore = prompt("On a scale of 1-10, How much do you like ICE CREAM?");
+
+
+    while (isNaN(LikeScore)) {
+        LikeScore = prompt('Please enter a NUMBER')
+    } 
+
+    LikeScore = Number(LikeScore);
+ 
+
+    while (LikeScore < 0 || LikeScore > 10 ){
+        LikeScore = prompt('Please enter a number (0 - 10)')
+    } 
+  
+    var score = Number(LikeScore);
+    var rate = score;
+
+    var name = enterName();
+        
+    if (score === 10) {
+        confirm(name + ", with a score of " + rate + ", you are COOL and ready for ice cream!");
+        } else if (score > 5 && score <10) {
+        confirm(name + ", with a score of " + rate + ", MIGHT be ready for ice cream.");
+        } else if (score >0 && score < 5) {
+        confirm(name + ", with a score of " + rate + ", you are NOT ready for ice cream.");
+        } else if (score >= 0) {
+        confirm(name + ", with a score of " + rate + ", you need to leave NOW!");
+    }
+     
+
+
+    return score;
     
 }
 
