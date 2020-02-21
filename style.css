@@ -1,5 +1,5 @@
 header {
-    height: 150px;
+    height: 180px;
     border-width: 10px;
     border-color: blueviolet; 
     border-style: double;   
@@ -15,14 +15,20 @@ h1 {
     color: blueviolet;
     font-family: cursive;
     margin: auto;
+    text-size-adjust: 10px;
 }
+
+h1:hover{
+    text-transform: bold;
+}
+
 
 ul {
     padding-left: 30vmin;
     align-items: center
 }
 
-article { width: 50%;
+article { width: 48%;
     height: 300px;
     float: left;
     border-width: 6px;
@@ -37,9 +43,7 @@ text-decoration: none;
 a:hover {
     text-transform: uppercase;
 }
-h1 {
-    text-transform: bold;
-}
+
 body {background-color: rgb(226, 192, 43);}
 
 footer {
